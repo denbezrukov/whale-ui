@@ -1,8 +1,11 @@
 .git/
 coverage/
 build
-examples/*/dist/
 packages/*/dist/
 packages/*/es/
 packages/*/lib/
 packages/*/build/
+apps/*/dist/
+apps/*/es/
+apps/*/lib/
+apps/*/build/
