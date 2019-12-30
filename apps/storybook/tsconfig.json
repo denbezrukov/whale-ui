@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "references": [
+    {"path": "../../packages/whale-ui-style"},
+    {"path": "../../packages/whale-ui"}
+  ]
+}

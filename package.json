@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "jest",
+    "storybook": "yarn workspace storybook run storybook",
+    "start:dev": "yarn install && yarn bootstrap && yarn run build-clean && yarn run build:watch",
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "format": "prettier --write **/*.{js,ts,tsx,json,md}",
+    "build": "ts-node scripts/src/builtTs.ts",
+    "build:watch": "yarn run build -w --pretty --preserveWatchOutput",
+    "build-clean": "rimraf ./packages/*/build ./packages/*/tsconfig.tsbuildinfo apps/*/build apps/*/tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@types/jest": "^24.0.24",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "babel-jest": "^24.9.0",
+    "chalk": "^3.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "execa": "^4.0.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.18.4",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}

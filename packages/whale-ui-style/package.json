@@ -1,0 +1,17 @@
+{
+  "name": "whale-ui-style",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "fela": "^11.0.2",
+    "fela-identifier": "^11.0.2",
+    "fela-plugin-extend": "^11.0.2",
+    "fela-plugin-prefixer": "^11.0.2",
+    "fela-plugin-unit": "^11.0.2",
+    "react-fela": "^11.0.2"
+  }
+}

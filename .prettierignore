@@ -1,0 +1,8 @@
+.git/
+coverage/
+build
+examples/*/dist/
+packages/*/dist/
+packages/*/es/
+packages/*/lib/
+packages/*/build/
