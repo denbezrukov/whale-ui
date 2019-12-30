@@ -18,6 +18,20 @@
     "build:watch": "yarn run build -w --pretty --preserveWatchOutput",
     "build-clean": "rimraf ./packages/*/build ./packages/*/tsconfig.tsbuildinfo apps/*/build apps/*/tsconfig.tsbuildinfo"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "yarn lint"
+    ],
+    "**/*.{js,ts,tsx,json,md}": [
+      "yarn format",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
@@ -37,6 +51,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "execa": "^4.0.0",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lerna": "^3.18.4",
     "lint-staged": "^9.5.0",

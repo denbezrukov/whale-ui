@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'test-utils';
+import { render, userEvent } from 'whale-ui-test-utils';
 import { Button } from '../button';
 
 describe('<Button/>', () => {
