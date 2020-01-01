@@ -4,9 +4,9 @@ import {
   RenderOptions,
   RenderResult,
 } from '@testing-library/react';
-import { StyleProvider, Theme } from 'whale-ui-style';
+import { createTheme, StyleProvider } from 'whale-ui-style';
 
-const theme: Theme = { font: { name: '' }, palette: { name: '' } };
+const theme = createTheme();
 
 const AllTheProviders: FunctionComponent = ({ children }) => (
   <StyleProvider theme={theme}>{children}</StyleProvider>

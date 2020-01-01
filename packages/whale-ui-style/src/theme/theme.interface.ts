@@ -1,7 +1,7 @@
+import { Palette } from './palette/palette.interface';
+
 export interface Theme {
-  palette: {
-    name: string;
-  };
+  palette: Palette;
   font: {
     name: string;
   };
