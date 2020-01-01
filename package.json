@@ -1,7 +1,5 @@
 {
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -20,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && lint-staged"
+      "pre-commit": "yarn build && yarn test && lint-staged"
     }
   },
   "lint-staged": {
